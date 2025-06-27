@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UveCheck - JIA Uveitis Screening Tool</title>
+    
+    <!-- Google Fonts: Lato -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Material Symbols for Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="card">
+            <header>
+                <span class="material-symbols-outlined header-icon">visibility</span>
+                <h1>UveCheck</h1>
+                <p>JIA Uveitis Screening Guideline Tool</p>
+            </header>
+
+            <form id="uveCheckForm" action="results.html">
+                <!-- Guideline Selection -->
+                <div class="form-group">
+                    <label for="countryChoice">Select Guideline</label>
+                    <select id="countryChoice" name="countryChoice" required>
+                        <option value="1">Nordic</option>
+                        <option value="2">US and Pakistan</option>
+                        <option value="3">UK</option>
+                        <option value="4">Spain and Portugal</option>
+                        <option value="5">Germany</option>
+                        <option value="6">Czech and Slovakia</option>
+                        <option value="7">Argentina</option>
+                        <option value="8">MIWGUC</option>
+                    </select>
+                </div>
+
+                <!-- Numerical Inputs -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="ageAtOnset">Age at Onset (JIA)</label>
+                        <input type="number" id="ageAtOnset" name="ageAtOnset" placeholder="e.g., 5" min="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="yearsSinceOnset">Years Since Onset</label>
+                        <input type="number" id="yearsSinceOnset" name="yearsSinceOnset" placeholder="e.g., 2" min="0" step="0.1" required>
+                    </div>
+                </div>
+
+                <!-- Boolean (Yes/No) Inputs -->
+                <div class="form-group">
+                    <label>Is ANA positive?</label>
+                    <div class="segmented-control">
+                        <input type="radio" id="ana_yes" name="isANA_Positive" value="true" required><label for="ana_yes">Yes</label>
+                        <input type="radio" id="ana_no" name="isANA_Positive" value="false"><label for="ana_no">No</label>
+                    </div>
+                </div>
+                 <div class="form-group">
+                    <label>Is RF positive?</label>
+                    <div class="segmented-control">
+                        <input type="radio" id="rf_yes" name="isRF_Positive" value="true" required><label for="rf_yes">Yes</label>
+                        <input type="radio" id="rf_no" name="isRF_Positive" value="false"><label for="rf_no">No</label>
+                    </div>
+                </div>
+                 <div class="form-group">
+                    <label>Is it systemic-onset arthritis?</label>
+                    <div class="segmented-control">
+                        <input type="radio" id="systemic_yes" name="isSystemicOnset" value="true" required><label for="systemic_yes">Yes</label>
+                        <input type="radio" id="systemic_no" name="isSystemicOnset" value="false"><label for="systemic_no">No</label>
+                    </div>
+                </div>
+                 <div class="form-group">
+                    <label>Is it enthesitis-related arthritis?</label>
+                    <div class="segmented-control">
+                        <input type="radio" id="era_yes" name="isEnthesitisRelated" value="true" required><label for="era_yes">Yes</label>
+                        <input type="radio" id="era_no" name="isEnthesitisRelated" value="false"><label for="era_no">No</label>
+                    </div>
+                </div>
+                
+                <button type="submit" class="button-primary">Calculate Recommendation</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

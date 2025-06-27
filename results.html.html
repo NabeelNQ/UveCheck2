@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UveCheck - Results</title>
+    
+    <!-- Google Fonts: Lato -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Material Symbols for Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="card">
+            <header>
+                <span class="material-symbols-outlined header-icon">checklist</span>
+                <h1>Screening Result</h1>
+            </header>
+
+            <div id="result-container">
+                <!-- Result will be dynamically inserted here -->
+                <div id="risk-banner" class="risk-banner">
+                    <span id="risk-icon" class="material-symbols-outlined"></span>
+                    <h2 id="risk-category"></h2>
+                </div>
+                <p id="recommendation-text" class="recommendation"></p>
+            </div>
+            
+            <div class="summary">
+                <h3>Input Summary</h3>
+                <p id="patient-summary"></p>
+            </div>
+
+            <a href="index.html" class="button-secondary">
+                <span class="material-symbols-outlined">arrow_back</span>
+                Check Another Patient
+            </a>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
