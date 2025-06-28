@@ -20,74 +20,28 @@
     <main>
         <div class="card">
             <header>
-                <span class="material-symbols-outlined header-icon">visibility</span>
                 <h1>UveCheck</h1>
-                <p>JIA Uveitis Screening Guideline Tool</p>
+                <p class="subtitle">Predict the risk of uveitis in children</p>
             </header>
 
-            <form id="uveCheckForm" action="results.html">
-                <!-- Guideline Selection -->
-                <div class="form-group">
-                    <label for="countryChoice">Select Guideline</label>
-                    <select id="countryChoice" name="countryChoice" required>
-                        <option value="1">Nordic</option>
-                        <option value="2">US and Pakistan</option>
-                        <option value="3">UK</option>
-                        <option value="4">Spain and Portugal</option>
-                        <option value="5">Germany</option>
-                        <option value="6">Czech and Slovakia</option>
-                        <option value="7">Argentina</option>
-                        <option value="8">MIWGUC</option>
-                    </select>
+            <div class="about-section">
+                <div class="about-header">
+                    <span class="material-symbols-outlined info-icon">info</span>
+                    <h3>About</h3>
                 </div>
+                <p>
+                    Introducing our innovative health screening app designed to <strong>predict the risk of uveitis</strong> in children with <strong>juvenile idiopathic arthritis</strong> (JIA).
+                </p>
+                <p>
+                    Utilizing advanced algorithms, the app considers various factors to determine personalized screening intervals. This app empowers parents and guardians with valuable insights, fostering timely healthcare interventions for improved outcomes.
+                </p>
+                <p>
+                    Stay informed, stay proactive, and prioritize your child's eye health with our predictive uveitis screening app.
+                </p>
+            </div>
 
-                <!-- Numerical Inputs -->
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="ageAtOnset">Age at Onset (JIA)</label>
-                        <input type="number" id="ageAtOnset" name="ageAtOnset" placeholder="e.g., 5" min="0" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="yearsSinceOnset">Years Since Onset</label>
-                        <input type="number" id="yearsSinceOnset" name="yearsSinceOnset" placeholder="e.g., 2" min="0" step="0.1" required>
-                    </div>
-                </div>
-
-                <!-- Boolean (Yes/No) Inputs -->
-                <div class="form-group">
-                    <label>Is ANA positive?</label>
-                    <div class="segmented-control">
-                        <input type="radio" id="ana_yes" name="isANA_Positive" value="true" required><label for="ana_yes">Yes</label>
-                        <input type="radio" id="ana_no" name="isANA_Positive" value="false"><label for="ana_no">No</label>
-                    </div>
-                </div>
-                 <div class="form-group">
-                    <label>Is RF positive?</label>
-                    <div class="segmented-control">
-                        <input type="radio" id="rf_yes" name="isRF_Positive" value="true" required><label for="rf_yes">Yes</label>
-                        <input type="radio" id="rf_no" name="isRF_Positive" value="false"><label for="rf_no">No</label>
-                    </div>
-                </div>
-                 <div class="form-group">
-                    <label>Is it systemic-onset arthritis?</label>
-                    <div class="segmented-control">
-                        <input type="radio" id="systemic_yes" name="isSystemicOnset" value="true" required><label for="systemic_yes">Yes</label>
-                        <input type="radio" id="systemic_no" name="isSystemicOnset" value="false"><label for="systemic_no">No</label>
-                    </div>
-                </div>
-                 <div class="form-group">
-                    <label>Is it enthesitis-related arthritis?</label>
-                    <div class="segmented-control">
-                        <input type="radio" id="era_yes" name="isEnthesitisRelated" value="true" required><label for="era_yes">Yes</label>
-                        <input type="radio" id="era_no" name="isEnthesitisRelated" value="false"><label for="era_no">No</label>
-                    </div>
-                </div>
-                
-                <button type="submit" class="button-primary">Calculate Recommendation</button>
-            </form>
+            <a href="form.html" class="button-primary">START TEST</a>
         </div>
     </main>
-
-    <script src="script.js"></script>
 </body>
 </html>
