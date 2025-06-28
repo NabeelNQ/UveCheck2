@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UveCheck - Prediction Result</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="card">
+            <!-- NEW: Header to match intro page -->
+             <header class="results-header">
+                <span class="material-symbols-outlined header-icon">visibility</span>
+                <h1>UveCheck</h1>
+            </header>
+
+            <div class="about-section">
+                <div class="about-header">
+                    <span class="material-symbols-outlined info-icon">psychology</span>
+                    <h3>Prediction Result</h3>
+                </div>
+                <p>Based on the analysis of various factors related to the patient's health, the screening interval for uveitis risk has been determined.</p>
+            </div>
+
+            <!-- NEW: Risk Slider Visualization -->
+            <div class="risk-slider-container">
+                <div class="risk-track"></div>
+                <div id="risk-thumb" class="risk-thumb">
+                    <span id="risk-thumb-letter"></span>
+                </div>
+                <div class="risk-labels">
+                    <span>None</span>
+                    <span>Low</span>
+                    <span>Medium</span>
+                    <span>High</span>
+                </div>
+            </div>
+
+            <div id="result-text-container">
+                <p id="result-category-text" class="result-category-text"></p>
+                <p id="result-recommendation-text" class="result-recommendation-text"></p>
+            </div>
+            
+            <div class="disclaimer">
+                <p>This recommendation is made to ensure proactive monitoring and early detection of any potential uveitis-related issues. Regular screening helps in managing the condition effectively. <strong>Please consult with your healthcare provider to schedule the screenings accordingly.</strong></p>
+            </div>
+
+            <a href="form.html" class="button-secondary">
+                <span class="material-symbols-outlined">arrow_back</span>
+                Check Another Patient
+            </a>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
